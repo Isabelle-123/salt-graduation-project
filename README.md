@@ -1,6 +1,11 @@
 # way-merchant-dashboard
 
-A dashboard for connected merchants to get an overview of their [Way](https://www.wayretail.co/) order flow.
+A dashboard for connected merchants to get an overview of their Way order flow.
+
+This was my final graduation project at `</salt>` together with our client [Way](https://www.wayretail.co/) and my team:
+* [Daniel Reed](https://github.com/kwaimind)
+* [Ivar Särner](https://github.com/ivarsarner)
+* [Isabelle Caspersson](https://github.com/Isabelle-123)
 
 [![](https://img.shields.io/badge/%F0%9F%94%A5-View%20on%20Firebase-orange)](https://way-merchant-dashboard.web.app/)
 
