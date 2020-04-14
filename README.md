@@ -1,10 +1,35 @@
 # way-merchant-dashboard
 
-A dashboard for connected merchants to get an overview of their Way checkout flow.
+A dashboard for connected merchants to get an overview of their Way order flow.
 
-![Alt Text](https://media1.giphy.com/media/qqtvGYCjDNwac/giphy.gif?cid=ecf05e47943ce736693fad5f7895f2b27b4e279dbf9f24eb&rid=giphy.gif)
+[![](https://img.shields.io/badge/%F0%9F%94%A5-View%20on%20Firebase-orange)](https://way-merchant-dashboard.web.app/)
 
-## firebase
+## 👨‍💻 Tech stack
+
+- React (Functional components, Hooks, useReducer)
+- Styled Components, React Transitions
+- Firebase (Realtime Database, Cloud Functions, Hosting)
+- Express
+- Jest
+- Enzyme
+
+## 🧪 Testing
+
+You can test to see how different users can switch accounts by logging in with the following test accounts
+
+_ICA_
+
+- ica.sabbatsberg@ica.se
+- saltway
+
+_Way Popup Store_
+
+- test@way.com
+- password
+
+## 🔥 Firebase
+
+If this is your first time running the dashboard, you will need to install the Firebase CLI and login: `npm install -g firebase-tools`
 
 You will need to create a `.env` file to connect to the database. This needs to be saved at `client/.env`:
 
@@ -16,15 +41,22 @@ REACT_APP_PROJECT_ID=XXXXXX
 REACT_APP_STORAGE_BUCKET=XXXXXX
 REACT_APP_MESSAGING_ID=XXXXXX
 REACT_APP_APPID=XXXXXX
+REACT_APP_API_ENDPOINT=XXXXXX
 ```
 
-## using the custom APIs
+Everything can be deployed to Firebase hosting and cloud functions by running `npm run deploy`.
+
+## 🗄️ Using the custom APIs
+
+We've made 2 mock data APIs to simulate users and product images. These are just for demo purposes.
+
+Since this project is hosted on Firebase as a cloud function, the backend is in the `functions` directory.
 
 **_Products_**
 
-Returns a product image from the ICA database, based on the product GTIN number in the order items data. There are 5 edge cases where ICA does not have the image, in which case we load the image from a local file database.
+Returns a product image from the ICA image database, based on the product GTIN number in the order items data. There are 5 edge cases where ICA does not have the image, in which case we load the image from a Firebase storage bucket.
 
-`GET /api/products/_GTIN_`
+`GET /api/products/:gtin`
 
 ```
 {
@@ -36,7 +68,7 @@ Any errors return a 404.
 
 **_Customers_**
 
-Returns either an array of 10 customers, or 1 random customer from the [Random User Generator API](https://randomuser.me/)
+Returns either array of 100 customers from the [Random User Generator API](https://randomuser.me/).
 
 `GET /api/customers`
 
@@ -51,17 +83,7 @@ Returns either an array of 10 customers, or 1 random customer from the [Random U
 ]
 ```
 
-`GET /api/customers/one`
-
-```
-{
-   "id": "298cc9d7-28d1-4cb8-bb53-a1d3206678cd",
-   "name": "Caitlin Montgomery",
-   "picture": "https://randomuser.me/api/portraits/women/14.jpg"
-}
-```
-
-## dev guidelines
+## 🏗️ Dev guidelines
 
 1. Only use functional components with hooks.
 2. Component declarations should use the `function App...` style:

@@ -1,21 +1,30 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import CheckoutContextProvider from './context/CheckoutContext';
+import React, { useContext } from 'react';
+import OrderContextProvider from './context/OrderContext';
+import OrderContainer from './components/OrderContainer';
+import Login from './components/Login';
 import Navigation from './components/Navigation';
-import CheckoutContainer from './components/CheckoutContainer';
-import Other from './components/Other';
-import './App.scss';
+import { LoginContext } from './context/LoginContext';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import './App.css';
 
 export default function App() {
+  const { loggedinUser } = useContext(LoginContext);
   return (
     <BrowserRouter>
-      <CheckoutContextProvider>
-        <Navigation />
-        <Switch>
-          <Route exact path="/" component={CheckoutContainer} />
-          <Route path="/other" component={Other} />
-        </Switch>
-      </CheckoutContextProvider>
+      <Switch>
+        <Route exact path="/">
+          {loggedinUser ? (
+            <OrderContextProvider>
+              <Navigation />
+              <OrderContainer />
+            </OrderContextProvider>
+          ) : (
+            <Login />
+          )}
+        </Route>
+        <Route path="/login" component={Login} />
+      </Switch>
     </BrowserRouter>
   );
 }

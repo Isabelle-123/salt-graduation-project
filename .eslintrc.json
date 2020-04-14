@@ -19,7 +19,9 @@
   },
   "plugins": ["react"],
   "ignorePatterns": ["client/", "node_modules/"],
-  "rules": {},
+  "rules": {
+    "no-console": "warn"
+  },
   "settings": {
     "react": {
       "version": "999.999.999"

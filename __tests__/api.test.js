@@ -1,26 +1,11 @@
-const request = require('supertest');
-const { app, server } = require('../server.js');
-
-afterAll((done) => {
-  server.close();
-  done();
-});
+const axios = require('axios');
 
 describe('The API', () => {
-  it('is up and running', (done) => {
-    request(app)
-      .get('/api')
-      .then((res) => {
-        expect(res.statusCode).toBe(200);
-        done();
-      });
-  });
-  it('returns the welcome message', (done) => {
-    request(app)
-      .get('/api')
-      .then((res) => {
-        expect(res.text).toBe('Way Merchant API');
-        done();
-      });
+  it('is up and running', async () => {
+    const req = await axios.get(
+      'https://us-central1-way-merchant-dashboard.cloudfunctions.net/server/api'
+    );
+    expect(req.statusCode).toBe(200);
+    expect(req.text).toBe('Way Merchant API');
   });
 });
