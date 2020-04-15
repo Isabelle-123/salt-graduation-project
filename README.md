@@ -20,12 +20,7 @@ This was my final graduation project at `</salt>` together with our client [Way]
 
 ## 🧪 Testing
 
-You can test to see how different users can switch accounts by logging in with the following test accounts
-
-_ICA_
-
-- ica.sabbatsberg@ica.se
-- saltway
+You can test to see how different users can switch accounts by logging in with the following test account
 
 _Way Popup Store_
 
