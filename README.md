@@ -8,9 +8,9 @@ This was my final graduation project at `</salt>` together with our client [Way]
 - [Ivar Särner](https://github.com/ivarsarner)
 - [Isabelle Caspersson](https://github.com/Isabelle-123)
 
-[![](https://img.shields.io/badge/%F0%9F%94%A5-View%20on%20Firebase-orange)](https://way-merchant-dashboard.web.app/)
+<img src="./images/preview.jpg" alt="preview" width="600"/>
 
-![preview](./images/preview.jpg)
+[![](https://img.shields.io/badge/%F0%9F%94%A5-View%20on%20Firebase-orange)](https://way-merchant-dashboard.web.app/)
 
 ## 👨‍💻 Tech stack
 
