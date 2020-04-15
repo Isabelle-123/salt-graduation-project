@@ -10,7 +10,7 @@ This was my final graduation project at `</salt>` together with our client [Way]
 
 [![](https://img.shields.io/badge/%F0%9F%94%A5-View%20on%20Firebase-orange)](https://way-merchant-dashboard.web.app/)
 
-![preview](./images/preview.png)
+![preview](./images/preview.jpg)
 
 ## 👨‍💻 Tech stack
 
