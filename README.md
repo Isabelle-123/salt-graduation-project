@@ -6,7 +6,7 @@ This was my final graduation project at `</salt>` together with our client [Way]
 
 - [Daniel Reed](https://github.com/kwaimind)
 - [Ivar Särner](https://github.com/ivarsarner)
-- [Oscar Näsman](https://github.com/onasman)
+- [Oskar Näsman](https://github.com/onasman)
 
 <img src="./images/preview.jpg" alt="preview" width="600"/>
 
